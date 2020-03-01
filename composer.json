@@ -15,7 +15,7 @@
         "issues": "https://github.com/wenhainan/thinkphp6-auth/issues"
     },
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=5.4.0"
     },
     "autoload": {
         "psr-4": {
