@@ -1,0 +1,25 @@
+{
+    "name": "wenhainan/thinkphp6-auth",
+    "description": "auth package for thinkphp5",
+    "homepage": "https://github.com/wenhainan/thinkphp6-auth",
+    "license": "Apache-2.0",
+    "minimum-stability": "stable",
+    "version": "1.0.1",
+    "authors": [
+        {
+            "name": "wenhainan",
+            "email": "610176732@qq.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/wenhainan/thinkphp6-auth/issues"
+    },
+    "require": {
+        "php": ">=5.4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "think\\wenhainan\\": "src/"
+        }
+    }
+}
