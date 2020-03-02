@@ -28,61 +28,42 @@ use think\facade\Request;
  */
 //数据库 请手动创建下sql
 /*
--- ---start----------
--- ----------------------------
--- Table structure for auth_user
--- ----------------------------
-DROP TABLE IF EXISTS `auth_user`;
-CREATE TABLE `auth_user` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `username` varchar(50) NOT NULL COMMENT '用户名',
-  `password` varchar(50) NOT NULL COMMENT '密码',
-  `mobile` varchar(11) DEFAULT '' COMMENT '手机',
-  `email` varchar(50) DEFAULT ''  COMMENT '邮箱',
-  `status` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '用户状态  1 正常  2 禁止',
-  `create_time` datetime DEFAULT NULL COMMENT '创建时间',
-  `last_login_time` datetime DEFAULT NULL COMMENT '最后登陆时间',
-  `last_login_ip` varchar(50) DEFAULT '' COMMENT '最后登录IP',
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `username` (`username`)
-) ENGINE=MyISAM AUTO_INCREMENT=195 DEFAULT CHARSET=utf8 COMMENT='用户表';
--- ----------------------------
--- auth_rule，规则表，
+------------------------------
+-- think_auth_rule，规则表，
 -- id:主键，name：规则唯一标识, title：规则中文名称 status 状态：为1正常，为0禁用，condition：规则表达式，为空表示存在就验证，不为空表示按照条件验证
--- ----------------------------
-DROP TABLE IF EXISTS `auth_rule`;
-CREATE TABLE `auth_rule` (
-    `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-    `name` char(80) NOT NULL DEFAULT '',
-    `title` char(20) NOT NULL DEFAULT '',
-    `type` tinyint(1) NOT NULL DEFAULT '1',
-    `status` tinyint(1) NOT NULL DEFAULT '1',
-    `condition` char(100) NOT NULL DEFAULT '',  # 规则附件条件,满足附加条件的规则,才认为是有效的规则
-    PRIMARY KEY (`id`),
+------------------------------
+ DROP TABLE IF EXISTS `think_auth_rule`;
+CREATE TABLE `think_auth_rule` (  
+    `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,  
+    `name` char(80) NOT NULL DEFAULT '',  
+    `title` char(20) NOT NULL DEFAULT '',  
+    `status` tinyint(1) NOT NULL DEFAULT '1',  
+    `condition` char(100) NOT NULL DEFAULT '',  
+    PRIMARY KEY (`id`),  
     UNIQUE KEY `name` (`name`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
--- ----------------------------
--- auth_group 用户组表，
+------------------------------
+-- think_auth_group 用户组表， 
 -- id：主键， title:用户组中文名称， rules：用户组拥有的规则id， 多个规则","隔开，status 状态：为1正常，为0禁用
--- ----------------------------
-DROP TABLE IF EXISTS `auth_group`;
-    CREATE TABLE `auth_group` (
-    `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-    `title` char(100) NOT NULL DEFAULT '',
-    `status` tinyint(1) NOT NULL DEFAULT '1',
-    `rules` char(80) NOT NULL DEFAULT '',
+------------------------------
+ DROP TABLE IF EXISTS `think_auth_group`;
+CREATE TABLE `think_auth_group` ( 
+    `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT, 
+    `title` char(100) NOT NULL DEFAULT '', 
+    `status` tinyint(1) NOT NULL DEFAULT '1', 
+    `rules` char(80) NOT NULL DEFAULT '', 
     PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
--- ----------------------------
--- auth_group_access 用户组明细表
+------------------------------
+-- think_auth_group_access 用户组明细表
 -- uid:用户id，group_id：用户组id
--- ----------------------------
-DROP TABLE IF EXISTS `auth_group_access`;
-    CREATE TABLE `auth_group_access` (
-    `uid` mediumint(8) unsigned NOT NULL,
-    `group_id` mediumint(8) unsigned NOT NULL,
-    UNIQUE KEY `uid_group_id` (`uid`,`group_id`),
-    KEY `uid` (`uid`),
+------------------------------
+DROP TABLE IF EXISTS `think_auth_group_access`;
+CREATE TABLE `think_auth_group_access` (  
+    `uid` mediumint(8) unsigned NOT NULL,  
+    `group_id` mediumint(8) unsigned NOT NULL, 
+    UNIQUE KEY `uid_group_id` (`uid`,`group_id`),  
+    KEY `uid` (`uid`), 
     KEY `group_id` (`group_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 */
@@ -108,7 +89,7 @@ class Auth
     public function __construct()
     {
         //可设置配置项 auth, 此配置项为数组。
-        if ($auth = Config::get('auth')) {
+        if ($auth = Config::get('app.auth')) {
             $this->config = array_merge($this->config, $auth);
         }
     }
