@@ -8,7 +8,7 @@
 // +----------------------------------------------------------------------
 // | Author: lqsong <957698457@qq.com>
 // +----------------------------------------------------------------------
-namespace wenhainan;
+namespace think\wenhainan;
 use think\facade\Db;
 use think\facade\Config;
 use think\facade\Session;
