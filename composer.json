@@ -21,5 +21,12 @@
         "psr-4": {
             "think\\wenhainan\\": "src/"
         }
+    },
+    "extra": {
+        "think": {
+            "config": {
+                "auth": "src/config/auth.php"
+            }
+        }
     }
 }
