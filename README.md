@@ -11,7 +11,7 @@ http://www.waytomilky.com/
 ### 公共配置
 ```
 // auth配置  自定义数据表位置在 ./config/auth.php里面
-'auth'  => [
+[
     'auth_on'           => 1, // 权限开关
     'auth_type'         => 1, // 认证方式，1为实时认证；2为登录认证。
     'auth_group'        => 'think_auth_group', // 用户组数据不带前缀表名
