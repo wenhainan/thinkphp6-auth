@@ -1,6 +1,9 @@
 # think-addons
 The ThinkPHP6 Auth Package
 
+## 官网 
+http://www.waytomilky.com/
+
 ## 安装
 > composer require wenhainan/thinkphp6-auth
 
@@ -17,6 +20,9 @@ The ThinkPHP6 Auth Package
     'auth_user'         => 'user', // 用户信息表不带前缀表名,主键自增字段为id
 ],
 ```
+
+# 交流qq群
+606645328
 
 ### 导入数据表
 > `think_` 为自定义的数据表前缀
