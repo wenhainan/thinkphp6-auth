@@ -2,10 +2,7 @@
 The ThinkPHP6 Auth Package
 - 本插件经thinkphp官方推荐认证扩展，请放心使用
 - 开发者基本礼仪，start一下
-
-## 官网 
-http://www.waytomilky.com/
-
+- 
 ## 安装
 > composer require wenhainan/thinkphp6-auth
 
@@ -22,7 +19,8 @@ http://www.waytomilky.com/
     'auth_user'         => 'user', // 用户信息表不带前缀表名,主键自增字段为id
 ],
 ```
-
+## 官网 
+http://www.waytomilky.com/
 # 交流qq群
 606645328
 
