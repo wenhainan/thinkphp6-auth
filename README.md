@@ -1,7 +1,7 @@
-# think-addons
+# thinkphp6.0权限扩展
 The ThinkPHP6 Auth Package
 - 本插件经thinkphp官方推荐认证扩展，请放心使用
-- 开发者基本礼仪，来颗星星呗
+- 开发者基本礼仪，start一下
 
 ## 官网 
 http://www.waytomilky.com/
