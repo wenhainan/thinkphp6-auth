@@ -6,7 +6,7 @@ The ThinkPHP6 Auth Package
 > composer require wenhainan/thinkphp6-auth
 
 ## 注意点
-需要用到proc_open函数,如果是宝塔面板用户,需要解禁下该函数,其余无需考虑到.
+* 需要用到proc_open函数,如果是宝塔面板用户,需要解禁下该函数,其余无需考虑到.
 
 ## 配置
 ### 公共配置
