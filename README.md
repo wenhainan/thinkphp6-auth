@@ -40,6 +40,7 @@ CREATE TABLE `think_auth_rule` (
     `name` char(80) NOT NULL DEFAULT '',  
     `title` char(20) NOT NULL DEFAULT '',  
     `status` tinyint(1) NOT NULL DEFAULT '1',  
+    `type` tinyint(1) NOT NULL DEFAULT '1',  
     `condition` char(100) NOT NULL DEFAULT '',  
     PRIMARY KEY (`id`),  
     UNIQUE KEY `name` (`name`)
