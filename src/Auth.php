@@ -256,15 +256,15 @@ class Auth
         return $userinfo[$uid];
     }
     //根据uid获取角色名称
-     function getRole($uid){
+    //根据uid获取角色名称
+    function getRole($uid){
         try{
-            $gid =  Db::name($this->config['auth_group_access'])->where('uid',$uid)->find()->group_id;
-            $title =   Db::name($this->config['auth_group'])->where('id',$gid)->find()->title;
+            $auth_group_access =  Db::name($this->config['auth_group_access'])->where('uid',$uid)->find();
+            $title =   Db::name($this->config['auth_group'])->where('id',$auth_group_access['group_id'])->value('title');
             return $title;
         }catch (\Exception $e){
             return '此用户未授予角色';
         }
-
     }
     /**
      * 授予用户权限
