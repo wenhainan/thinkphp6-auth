@@ -5,13 +5,13 @@ The ThinkPHP6 Auth Package
 ## 安装
 > composer require wenhainan/thinkphp6-auth
 
-## 注意点
-* 需要用到proc_open函数,如果是宝塔面板用户,需要解禁下该函数,其余无需考虑到.
+## 兼容版本
+- thinkphp 5.0/5.1/6.0
 
 ## 配置
-### 公共配置
 ```
-// auth配置  自定义数据表位置在 ./config/auth.php里面
+// auth配置  自定义数据表位置在 ./config/auth.php里面,安装扩展会自动生成。如果没有的话建议手动建立下。
+//下面的数据表映射需要与表对应上
 [
     'auth_on'           => 1, // 权限开关
     'auth_type'         => 1, // 认证方式，1为实时认证；2为登录认证。
@@ -23,6 +23,7 @@ The ThinkPHP6 Auth Package
 ```
 ## 官网 
 http://www.waytomilky.com/
+
 # 交流qq群
 606645328
 
