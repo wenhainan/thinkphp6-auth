@@ -11,9 +11,10 @@ Markdown is a lightweight and easy-to-use syntax for styling your writing. It in
 ```markdown
 Syntax highlighted code block
 
-# Header 1
-## Header 2
-### Header 3
+# thinkphp6-auth
+## 安装
+`composer require wenhainan/thinkphp6-auth`
+### 使用
 
 - Bulleted
 - List
