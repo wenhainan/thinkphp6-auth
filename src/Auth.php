@@ -266,16 +266,6 @@ class Auth
         }
 
     }
-   //根据uid获取角色名称
-    static function getRoleName($uid){
-        try{
-            $gid =  AuthGroupAccess::where('uid',$uid)->find()->group_id;
-            $title =   AuthGroup::where('id',$gid)->find()->title;
-            return $title;
-        }catch (\Exception $e){
-            return '此用户未授予角色';
-        }
-    }
     /**
      * 授予用户权限
      */
