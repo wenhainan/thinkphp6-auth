@@ -1,7 +1,8 @@
-# thinkphp6.0权限扩展
+## thinkphp6.0权限扩展
 The ThinkPHP6 Auth Package
 - 本插件经thinkphp官方推荐认证扩展，请放心使用
 - 开发者基本礼仪，star一下
+
 ## 安装
 > composer require wenhainan/thinkphp6-auth
 
