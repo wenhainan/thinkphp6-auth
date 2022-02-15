@@ -2,6 +2,7 @@
 The ThinkPHP6 Auth Package
 - 本插件经thinkphp官方推荐认证扩展，请放心使用
 - 开发者基本礼仪，star一下
+- 另外推荐下新作品 think-token 用户api验证 https://github.com/wenhainan/think-token
 ## 安装
 > composer require wenhainan/thinkphp6-auth
 
