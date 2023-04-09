@@ -25,8 +25,6 @@ The ThinkPHP6 Auth Package
 ## 官网 
 http://www.waytomilky.com/
 
-# 交流qq群
-606645328
 
 ### 导入数据表
 > `think_` 为自定义的数据表前缀
